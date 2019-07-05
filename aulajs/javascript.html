@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>hello JavaScript World</title>
+<style>
+body{
+background-color: greenyellow;
+color: firebrick;
+}
+</style> 
+
+</head>
+<body>
+
+<script>
+/* O comando abaixo só é visto no console do navegador */ 
+console.log("Alo Ha Mundo Javascript");
+/* Abre uma janela e exibe o conteudo */
+//alert("saudade do sublime!");
+/* garante que sera carregado dps de tds os elementos HTML */
+function perguntaDoLuiz(){document.querySelector("H1").textContent = "js é massa" 
+
+}
+window.onload = function(){
+var h1 = document.querySelector("h1");
+h1.innerHTML = "<em>JS</em> não é java!"
+h1.style = "font-size ; 50px; color: deepSkyBlue;";//Saudades
+//variavel moderna local
+let h1_2 = document.querySelector(".segundoH1")
+let h1_3 = document.querySelector("#terceiroH1")
+h1_2.style = "font-size: 10px";
+h1_3.style = "text-shadow: 3px 3px 5px black";
+let h_uns = document.querySelectorAll("h1");
+
+for(let i=0; i < h_uns.length; i++)
+h_uns[i].style = "border: 2px dashed white";
+}
+window.onload = perguntaDoLuiz;
+//js variables
+//https://www.w3schools.com/js/exercise_js.asp
+//https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables1
+var carname = "volvo"
+</script>
+<h1>Introdução a Linguagem javascript</h1>
+<h1 class="segundoH1">segundo H1</h1>
+<h1 class="terceiroH1">terceiro H1</h1>
+
+<div style="text-align: center; background-color:white;">
+<h2>exemplo da lâmpada</h2>
+<button onclick="document.querySelector('#lampada').src = 'acesa.jpg' ;"
+>Acender</button>
+<img src="apagada.jpg" id="lampada" onmouseover="acender()" onmouseout="apagar()">
+<button onclick="document.querySelector('#lampada').src = 'apagada.jpg'">
+apagar</button>
+</div>
+<script>
+var lampada = document.querySelector("#lampada")
+function acender(){lampada.src = "acesa.jpg"};
+function apagar(){lampada.src = "apagada.jpg"};
+</script>
+</body>
+</html>
