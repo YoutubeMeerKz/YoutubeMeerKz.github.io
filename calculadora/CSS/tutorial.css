@@ -1,0 +1,17 @@
+body{
+    background-color: aqua;
+    color:darkblue;
+}
+img{
+    display: block;
+    margin: 0 auto;
+}
+
+#divcentral{
+    display: block;
+    margin: 0 auto;
+    border: 2px solid red;
+    margin-top: 20px;
+    width: 400px;
+
+}
